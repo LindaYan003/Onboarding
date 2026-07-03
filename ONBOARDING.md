@@ -412,11 +412,11 @@ class Parcel extends Model
 ```
 
 **3) 控制器 `app/Http/Controllers/ParcelController.php`**
+
 ```php
 namespace App\Http\Controllers;
 
-use App\Models\Parcel;
-use Illuminate\Http\Request;
+use App\Models\Parcel;use Illuminate\Http\Request;
 
 class ParcelController extends Controller
 {
