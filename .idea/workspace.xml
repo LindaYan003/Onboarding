@@ -1,0 +1,398 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="3d505c75-aba2-4dea-9cf1-eeec843d79f9" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/parcel-api/app/Http/Controllers/AuthController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/parcel-api/app/Models/User.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/parcel-api/config/auth.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/parcel-api/app/Providers/AuthServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/parcel-api/app/Providers/AuthServiceProvider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/parcel-api/bootstrap/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/parcel-api/bootstrap/app.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/parcel-api/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/parcel-api/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/parcel-api/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/parcel-api/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/parcel-api/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/parcel-api/routes/web.php" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerConfigs">
+    <option name="configs">
+      <option value="$PROJECT_DIR$/parcel-api/composer.json" />
+    </option>
+  </component>
+  <component name="ComposerSettings" synchronizationState="SYNCHRONIZE">
+    <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
+    <execution />
+  </component>
+  <component name="EmbeddingIndexingInfo">
+    <option name="cachedIndexableFilesCount" value="77" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="PHP File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="McpProjectServerCommands">
+    <commands />
+    <urls />
+  </component>
+  <component name="NextEditCompletionFeaturesState">
+    <decayedCancelled>
+      <entry key="MS100" value="1.0" />
+      <entry key="MS500" value="1.0000686681204034" />
+      <entry key="S2" value="1.091030890248526" />
+      <entry key="S5" value="1.383420664918273" />
+      <entry key="S10" value="1.6192097099677003" />
+      <entry key="S30" value="1.8523727381641009" />
+      <entry key="S60" value="1.934333897268929" />
+      <entry key="M2" value="2.241203179738462" />
+      <entry key="M5" value="4.374721744808028" />
+      <entry key="M10" value="7.0714821975877" />
+      <entry key="M15" value="8.554140939660092" />
+      <entry key="M30" value="10.656088703850514" />
+      <entry key="H1" value="13.812777044607609" />
+      <entry key="H2" value="20.43480842587073" />
+      <entry key="H4" value="28.853483149520976" />
+      <entry key="D1" value="55.099569783237236" />
+      <entry key="W1" value="210.37100218244825" />
+    </decayedCancelled>
+    <decayedSelected>
+      <entry key="MS100" value="0.0" />
+      <entry key="MS500" value="0.0" />
+      <entry key="S2" value="0.0" />
+      <entry key="S5" value="0.0" />
+      <entry key="S10" value="0.0" />
+      <entry key="S30" value="3.169230990112131E-121" />
+      <entry key="S60" value="5.629592357456378E-61" />
+      <entry key="M2" value="7.5034928179180575E-31" />
+      <entry key="M5" value="9.094001106752158E-13" />
+      <entry key="M10" value="1.0781548382283279E-6" />
+      <entry key="M15" value="1.2242688445936593E-4" />
+      <entry key="M30" value="0.014927412440954127" />
+      <entry key="H1" value="0.17058094143325717" />
+      <entry key="H2" value="0.5821756347659177" />
+      <entry key="H4" value="1.078160559502846" />
+      <entry key="D1" value="2.437358151330145" />
+      <entry key="W1" value="13.070462138081421" />
+    </decayedSelected>
+    <decayedShown>
+      <entry key="MS100" value="2.337660195408142E-13" />
+      <entry key="MS500" value="0.002983953987093244" />
+      <entry key="S2" value="0.2852170830913167" />
+      <entry key="S5" value="0.8645711315893972" />
+      <entry key="S10" value="1.3004588894407294" />
+      <entry key="S30" value="1.7283588846852889" />
+      <entry key="S60" value="1.8696312727756368" />
+      <entry key="M2" value="2.2054052880521584" />
+      <entry key="M5" value="4.348060044318846" />
+      <entry key="M10" value="7.049491303347443" />
+      <entry key="M15" value="8.536322451393799" />
+      <entry key="M30" value="10.659743416551429" />
+      <entry key="H1" value="13.976374575430091" />
+      <entry key="H2" value="21.0124155320175" />
+      <entry key="H4" value="29.928770697046925" />
+      <entry key="D1" value="57.53629403706952" />
+      <entry key="W1" value="223.44133692541752" />
+    </decayedShown>
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="$PROJECT_DIR$/../../../../tools/php82/php.exe">
+    <include_path>
+      <path value="$PROJECT_DIR$/vendor/psr/http-factory" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/inflector" />
+      <path value="$PROJECT_DIR$/vendor/psr/http-message" />
+      <path value="$PROJECT_DIR$/vendor/carbonphp/carbon-doctrine-types" />
+      <path value="$PROJECT_DIR$/vendor/symfony/deprecation-contracts" />
+      <path value="$PROJECT_DIR$/vendor/fruitcake/php-cors" />
+      <path value="$PROJECT_DIR$/vendor/symfony/http-foundation" />
+      <path value="$PROJECT_DIR$/vendor/ralouphie/getallheaders" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-mbstring" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php80" />
+      <path value="$PROJECT_DIR$/vendor/composer" />
+      <path value="$PROJECT_DIR$/vendor/psr/http-client" />
+      <path value="$PROJECT_DIR$/parcel-api/vendor/graham-campbell/result-type" />
+      <path value="$PROJECT_DIR$/parcel-api/vendor/composer" />
+      <path value="$PROJECT_DIR$/parcel-api/vendor/psr/clock" />
+      <path value="$PROJECT_DIR$/parcel-api/vendor/psr/container" />
+      <path value="$PROJECT_DIR$/parcel-api/vendor/psr/event-dispatcher" />
+      <path value="$PROJECT_DIR$/parcel-api/vendor/psr/log" />
+      <path value="$PROJECT_DIR$/parcel-api/vendor/psr/simple-cache" />
+      <path value="$PROJECT_DIR$/parcel-api/vendor/voku/portable-ascii" />
+      <path value="$PROJECT_DIR$/parcel-api/vendor/brick/math" />
+      <path value="$PROJECT_DIR$/parcel-api/vendor/nikic/fast-route" />
+      <path value="$PROJECT_DIR$/parcel-api/vendor/nikic/php-parser" />
+      <path value="$PROJECT_DIR$/parcel-api/vendor/nesbot/carbon" />
+      <path value="$PROJECT_DIR$/parcel-api/vendor/ramsey/collection" />
+      <path value="$PROJECT_DIR$/parcel-api/vendor/ramsey/uuid" />
+      <path value="$PROJECT_DIR$/parcel-api/vendor/vlucas/phpdotenv" />
+      <path value="$PROJECT_DIR$/parcel-api/vendor/egulias/email-validator" />
+      <path value="$PROJECT_DIR$/parcel-api/vendor/laravel/lumen-framework" />
+      <path value="$PROJECT_DIR$/parcel-api/vendor/laravel/prompts" />
+      <path value="$PROJECT_DIR$/parcel-api/vendor/laravel/serializable-closure" />
+      <path value="$PROJECT_DIR$/parcel-api/vendor/mockery/mockery" />
+      <path value="$PROJECT_DIR$/parcel-api/vendor/monolog/monolog" />
+      <path value="$PROJECT_DIR$/parcel-api/vendor/myclabs/deep-copy" />
+      <path value="$PROJECT_DIR$/parcel-api/vendor/phar-io/manifest" />
+      <path value="$PROJECT_DIR$/parcel-api/vendor/phar-io/version" />
+      <path value="$PROJECT_DIR$/parcel-api/vendor/phpunit/php-code-coverage" />
+      <path value="$PROJECT_DIR$/parcel-api/vendor/phpunit/php-file-iterator" />
+      <path value="$PROJECT_DIR$/parcel-api/vendor/phpunit/php-invoker" />
+      <path value="$PROJECT_DIR$/parcel-api/vendor/phpunit/php-text-template" />
+      <path value="$PROJECT_DIR$/parcel-api/vendor/phpunit/php-timer" />
+      <path value="$PROJECT_DIR$/parcel-api/vendor/phpunit/phpunit" />
+      <path value="$PROJECT_DIR$/parcel-api/vendor/symfony/console" />
+      <path value="$PROJECT_DIR$/parcel-api/vendor/symfony/deprecation-contracts" />
+      <path value="$PROJECT_DIR$/parcel-api/vendor/symfony/error-handler" />
+      <path value="$PROJECT_DIR$/parcel-api/vendor/symfony/event-dispatcher" />
+      <path value="$PROJECT_DIR$/parcel-api/vendor/symfony/event-dispatcher-contracts" />
+      <path value="$PROJECT_DIR$/parcel-api/vendor/symfony/finder" />
+      <path value="$PROJECT_DIR$/parcel-api/vendor/symfony/http-foundation" />
+      <path value="$PROJECT_DIR$/parcel-api/vendor/symfony/http-kernel" />
+      <path value="$PROJECT_DIR$/parcel-api/vendor/symfony/mime" />
+      <path value="$PROJECT_DIR$/parcel-api/vendor/symfony/polyfill-ctype" />
+      <path value="$PROJECT_DIR$/parcel-api/vendor/symfony/polyfill-intl-grapheme" />
+      <path value="$PROJECT_DIR$/parcel-api/vendor/symfony/polyfill-intl-idn" />
+      <path value="$PROJECT_DIR$/parcel-api/vendor/symfony/polyfill-intl-normalizer" />
+      <path value="$PROJECT_DIR$/parcel-api/vendor/symfony/polyfill-mbstring" />
+      <path value="$PROJECT_DIR$/parcel-api/vendor/symfony/polyfill-php80" />
+      <path value="$PROJECT_DIR$/parcel-api/vendor/symfony/polyfill-php83" />
+      <path value="$PROJECT_DIR$/parcel-api/vendor/symfony/process" />
+      <path value="$PROJECT_DIR$/parcel-api/vendor/symfony/service-contracts" />
+      <path value="$PROJECT_DIR$/parcel-api/vendor/symfony/string" />
+      <path value="$PROJECT_DIR$/parcel-api/vendor/symfony/translation" />
+      <path value="$PROJECT_DIR$/parcel-api/vendor/symfony/translation-contracts" />
+      <path value="$PROJECT_DIR$/parcel-api/vendor/symfony/var-dumper" />
+      <path value="$PROJECT_DIR$/parcel-api/vendor/theseer/tokenizer" />
+      <path value="$PROJECT_DIR$/parcel-api/vendor/doctrine/inflector" />
+      <path value="$PROJECT_DIR$/parcel-api/vendor/doctrine/lexer" />
+      <path value="$PROJECT_DIR$/parcel-api/vendor/fakerphp/faker" />
+      <path value="$PROJECT_DIR$/parcel-api/vendor/hamcrest/hamcrest-php" />
+      <path value="$PROJECT_DIR$/parcel-api/vendor/carbonphp/carbon-doctrine-types" />
+      <path value="$PROJECT_DIR$/parcel-api/vendor/fruitcake/php-cors" />
+      <path value="$PROJECT_DIR$/parcel-api/vendor/phpoption/phpoption" />
+      <path value="$PROJECT_DIR$/parcel-api/vendor/sebastian/cli-parser" />
+      <path value="$PROJECT_DIR$/parcel-api/vendor/sebastian/code-unit" />
+      <path value="$PROJECT_DIR$/parcel-api/vendor/sebastian/code-unit-reverse-lookup" />
+      <path value="$PROJECT_DIR$/parcel-api/vendor/sebastian/comparator" />
+      <path value="$PROJECT_DIR$/parcel-api/vendor/sebastian/complexity" />
+      <path value="$PROJECT_DIR$/parcel-api/vendor/sebastian/diff" />
+      <path value="$PROJECT_DIR$/parcel-api/vendor/sebastian/environment" />
+      <path value="$PROJECT_DIR$/parcel-api/vendor/sebastian/exporter" />
+      <path value="$PROJECT_DIR$/parcel-api/vendor/sebastian/global-state" />
+      <path value="$PROJECT_DIR$/parcel-api/vendor/sebastian/lines-of-code" />
+      <path value="$PROJECT_DIR$/parcel-api/vendor/sebastian/object-enumerator" />
+      <path value="$PROJECT_DIR$/parcel-api/vendor/sebastian/object-reflector" />
+      <path value="$PROJECT_DIR$/parcel-api/vendor/sebastian/recursion-context" />
+      <path value="$PROJECT_DIR$/parcel-api/vendor/sebastian/type" />
+      <path value="$PROJECT_DIR$/parcel-api/vendor/sebastian/version" />
+      <path value="$PROJECT_DIR$/parcel-api/vendor/guzzlehttp/uri-template" />
+      <path value="$PROJECT_DIR$/parcel-api/vendor/illuminate/auth" />
+      <path value="$PROJECT_DIR$/parcel-api/vendor/illuminate/broadcasting" />
+      <path value="$PROJECT_DIR$/parcel-api/vendor/illuminate/bus" />
+      <path value="$PROJECT_DIR$/parcel-api/vendor/illuminate/cache" />
+      <path value="$PROJECT_DIR$/parcel-api/vendor/illuminate/collections" />
+      <path value="$PROJECT_DIR$/parcel-api/vendor/illuminate/conditionable" />
+      <path value="$PROJECT_DIR$/parcel-api/vendor/illuminate/config" />
+      <path value="$PROJECT_DIR$/parcel-api/vendor/illuminate/console" />
+      <path value="$PROJECT_DIR$/parcel-api/vendor/illuminate/container" />
+      <path value="$PROJECT_DIR$/parcel-api/vendor/illuminate/contracts" />
+      <path value="$PROJECT_DIR$/parcel-api/vendor/illuminate/database" />
+      <path value="$PROJECT_DIR$/parcel-api/vendor/illuminate/encryption" />
+      <path value="$PROJECT_DIR$/parcel-api/vendor/illuminate/events" />
+      <path value="$PROJECT_DIR$/parcel-api/vendor/illuminate/filesystem" />
+      <path value="$PROJECT_DIR$/parcel-api/vendor/illuminate/hashing" />
+      <path value="$PROJECT_DIR$/parcel-api/vendor/illuminate/http" />
+      <path value="$PROJECT_DIR$/parcel-api/vendor/illuminate/log" />
+      <path value="$PROJECT_DIR$/parcel-api/vendor/illuminate/macroable" />
+      <path value="$PROJECT_DIR$/parcel-api/vendor/illuminate/pagination" />
+      <path value="$PROJECT_DIR$/parcel-api/vendor/illuminate/pipeline" />
+      <path value="$PROJECT_DIR$/parcel-api/vendor/illuminate/queue" />
+      <path value="$PROJECT_DIR$/parcel-api/vendor/illuminate/session" />
+      <path value="$PROJECT_DIR$/parcel-api/vendor/illuminate/support" />
+      <path value="$PROJECT_DIR$/parcel-api/vendor/illuminate/testing" />
+      <path value="$PROJECT_DIR$/parcel-api/vendor/illuminate/translation" />
+      <path value="$PROJECT_DIR$/parcel-api/vendor/illuminate/validation" />
+      <path value="$PROJECT_DIR$/parcel-api/vendor/illuminate/view" />
+      <path value="$PROJECT_DIR$/parcel-api/vendor/nunomaduro/termwind" />
+      <path value="$PROJECT_DIR$/parcel-api/vendor/dragonmantank/cron-expression" />
+      <path value="$PROJECT_DIR$/vendor/lcobucci/clock" />
+      <path value="$PROJECT_DIR$/vendor/lcobucci/jwt" />
+      <path value="$PROJECT_DIR$/vendor/symfony/clock" />
+      <path value="$PROJECT_DIR$/vendor/symfony/finder" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php83" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php84" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-grapheme" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-normalizer" />
+      <path value="$PROJECT_DIR$/vendor/symfony/mime" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-ctype" />
+      <path value="$PROJECT_DIR$/vendor/symfony/error-handler" />
+      <path value="$PROJECT_DIR$/vendor/symfony/event-dispatcher-contracts" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-idn" />
+      <path value="$PROJECT_DIR$/vendor/stella-maris/clock" />
+      <path value="$PROJECT_DIR$/vendor/symfony/console" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php85" />
+      <path value="$PROJECT_DIR$/vendor/symfony/event-dispatcher" />
+      <path value="$PROJECT_DIR$/vendor/symfony/var-dumper" />
+      <path value="$PROJECT_DIR$/vendor/symfony/http-kernel" />
+      <path value="$PROJECT_DIR$/vendor/symfony/translation-contracts" />
+      <path value="$PROJECT_DIR$/vendor/tymon/jwt-auth" />
+      <path value="$PROJECT_DIR$/vendor/symfony/service-contracts" />
+      <path value="$PROJECT_DIR$/vendor/symfony/string" />
+      <path value="$PROJECT_DIR$/vendor/symfony/translation" />
+      <path value="$PROJECT_DIR$/vendor/symfony/process" />
+      <path value="$PROJECT_DIR$/vendor/illuminate/auth" />
+      <path value="$PROJECT_DIR$/vendor/guzzlehttp/guzzle" />
+      <path value="$PROJECT_DIR$/vendor/illuminate/bus" />
+      <path value="$PROJECT_DIR$/vendor/guzzlehttp/promises" />
+      <path value="$PROJECT_DIR$/vendor/illuminate/collections" />
+      <path value="$PROJECT_DIR$/vendor/guzzlehttp/psr7" />
+      <path value="$PROJECT_DIR$/vendor/illuminate/conditionable" />
+      <path value="$PROJECT_DIR$/vendor/voku/portable-ascii" />
+      <path value="$PROJECT_DIR$/vendor/guzzlehttp/uri-template" />
+      <path value="$PROJECT_DIR$/vendor/illuminate/console" />
+      <path value="$PROJECT_DIR$/vendor/illuminate/container" />
+      <path value="$PROJECT_DIR$/vendor/illuminate/contracts" />
+      <path value="$PROJECT_DIR$/vendor/illuminate/database" />
+      <path value="$PROJECT_DIR$/vendor/illuminate/events" />
+      <path value="$PROJECT_DIR$/vendor/illuminate/filesystem" />
+      <path value="$PROJECT_DIR$/vendor/illuminate/http" />
+      <path value="$PROJECT_DIR$/vendor/illuminate/macroable" />
+      <path value="$PROJECT_DIR$/vendor/illuminate/pipeline" />
+      <path value="$PROJECT_DIR$/vendor/illuminate/queue" />
+      <path value="$PROJECT_DIR$/vendor/illuminate/reflection" />
+      <path value="$PROJECT_DIR$/vendor/illuminate/session" />
+      <path value="$PROJECT_DIR$/vendor/illuminate/support" />
+      <path value="$PROJECT_DIR$/vendor/illuminate/view" />
+      <path value="$PROJECT_DIR$/vendor/brick/math" />
+      <path value="$PROJECT_DIR$/vendor/laravel/prompts" />
+      <path value="$PROJECT_DIR$/vendor/laravel/serializable-closure" />
+      <path value="$PROJECT_DIR$/vendor/nesbot/carbon" />
+      <path value="$PROJECT_DIR$/vendor/ramsey/collection" />
+      <path value="$PROJECT_DIR$/vendor/ramsey/uuid" />
+      <path value="$PROJECT_DIR$/vendor/nunomaduro/termwind" />
+      <path value="$PROJECT_DIR$/vendor/psr/simple-cache" />
+      <path value="$PROJECT_DIR$/vendor/psr/clock" />
+      <path value="$PROJECT_DIR$/vendor/psr/container" />
+      <path value="$PROJECT_DIR$/vendor/psr/event-dispatcher" />
+      <path value="$PROJECT_DIR$/vendor/psr/log" />
+      <path value="$PROJECT_DIR$/parcel-api/vendor/php-open-source-saver/jwt-auth" />
+      <path value="$PROJECT_DIR$/parcel-api/vendor/lcobucci/clock" />
+      <path value="$PROJECT_DIR$/parcel-api/vendor/lcobucci/jwt" />
+      <path value="$PROJECT_DIR$/parcel-api/vendor/stella-maris/clock" />
+      <path value="$PROJECT_DIR$/parcel-api/vendor/namshi/jose" />
+    </include_path>
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 1,
+  &quot;fromUser&quot;: false
+}</component>
+  <component name="ProjectId" id="3FxXTZkHUPTSPCMtJgveVtkmwIZ" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "PHP Script.app.php.executor": "Run",
+    "PHP Script.web.php.executor": "Run",
+    "RunOnceActivity.MCP Project settings loaded": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
+    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
+    "git-widget-placeholder": "main",
+    "junie.onboarding.icon.badge.shown": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "com.laravel_idea.plugin.routing.settings.LaravelIdeaRoutingSettingsForm",
+    "to.speed.mode.migration.done": "true",
+    "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql"
+    ]
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Linda\PhpstormProjects\onboarding" />
+      <recent name="C:\Users\Linda\PhpstormProjects\onboarding\parcel-api\routes" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Database Script.packages_setup.sql">
+    <configuration name="packages_setup.sql" type="DatabaseScript" editBeforeRun="true" temporary="true" nameIsGenerated="true">
+      <script-file value="$PROJECT_DIR$/packages_setup.sql" />
+      <script-mode>FILE</script-mode>
+      <method v="2" />
+    </configuration>
+    <configuration name="parcel-api" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
+      <TestRunner configuration_file="$PROJECT_DIR$/parcel-api/phpunit.xml" scope="XML" use_alternative_configuration_file="true" />
+      <method v="2" />
+    </configuration>
+    <configuration name="app.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$PROJECT_DIR$/parcel-api/bootstrap/app.php">
+      <method v="2" />
+    </configuration>
+    <configuration name="web.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$PROJECT_DIR$/parcel-api/routes/web.php">
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Database Script.packages_setup.sql" />
+        <item itemvalue="PHP Script.app.php" />
+        <item itemvalue="PHP Script.web.php" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-d6986cc7102b-31caf2ab9e3c-JavaScript-PS-261.25134.104" />
+        <option value="bundled-php-predefined-a98d8de5180a-6bbb74dbab74-com.jetbrains.php.sharedIndexes-PS-261.25134.104" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="3d505c75-aba2-4dea-9cf1-eeec843d79f9" name="Changes" comment="" />
+      <created>1783017707951</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1783017707951</updated>
+      <workItem from="1783017708746" duration="27986000" />
+      <workItem from="1783450038088" duration="12651000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/parcel-api/app/Providers/AuthServiceProvider.php</url>
+          <line>4</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>
