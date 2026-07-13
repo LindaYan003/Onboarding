@@ -10,6 +10,7 @@ use PHPOpenSourceSaver\JWTAuth\Facades\JWTAuth;
 
 class AuthController extends Controller
 {
+
     public function register(Request $request){
 
         $this->validate($request, [
@@ -34,13 +35,17 @@ class AuthController extends Controller
         $ttlInSeconds = config('jwt.ttl', 60) * 60;
 
         // 5. Return user data and authorization tokens cleanly
-        return response()->json([
-            'message' => 'User successfully registered',
-            'user' => $user,
-            'access_token' => $token,
-            'token_type' => 'bearer',
-            'expires_in' => $ttlInSeconds
-        ], 201);
+        return $this->success(
+            [
+                'user'         => $user,
+                'access_token' => $token,
+                'token_type'   => 'bearer',
+                'expires_in'   => $ttlInSeconds
+            ],
+            'User successfully registered',201// Explicit HTTP Status for account creation
+        );
+
+
     }
 
     public function login(Request $request)
@@ -67,17 +72,22 @@ class AuthController extends Controller
         $token = JWTAuth::fromUser($user);
 
         // 5. Return the clean token response
-        return response()->json([
-            'access_token' => $token,
-            'token_type' => 'bearer',
-            'expires_in' => config('jwt.ttl', 60) * 60
-        ], 200);
+
+
+        return $this->success(
+            [
+                'access_token' => $token,
+                'token_type' => 'bearer',
+                'expires_in' => config('jwt.ttl', 60) * 60
+            ],
+            'successfull login',200// Explicit HTTP Status for account creation
+        );
     }
     public function me()
     {
         // auth()->user() reads the JWT token from the request header,
         // decrypts the user ID, and fetches the User model from the database.
-        return response()->json(auth()->user(), 200);
+        return $this->success(auth()->user(),"success",200);
     }
 
     /**
@@ -91,12 +101,16 @@ class AuthController extends Controller
         // database/cache blacklist so it can never be used again.
         auth()->logout();
 
-        return response()->json([
-            'message' => 'Successfully logged out'
-        ], 200);
+        return $this->success(null,
+            'Successfully logged out'
+        ,200);
     }
 
+    public function five_hundred()
+    {
+        return ThisFakeFunctionWillCrashPHPNow();
 
+    }
 
 
 }

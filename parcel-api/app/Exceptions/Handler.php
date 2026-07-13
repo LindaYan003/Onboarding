@@ -11,6 +11,7 @@ use Throwable;
 
 class Handler extends ExceptionHandler
 {
+
     /**
      * A list of the exception types that should not be reported.
      *
@@ -47,8 +48,51 @@ class Handler extends ExceptionHandler
      *
      * @throws \Throwable
      */
-    public function render($request, Throwable $exception)
+
+
+
+        public function render($request, Throwable $exception)  // ← OOP: Method overriding
     {
-        return parent::render($request, $exception);
+        if ($exception instanceof ModelNotFoundException) {
+            return response()->json([
+                'success' => false,
+                'message' => 'Resource not found',
+                'data'    => null,
+            ], 404);
+        }
+
+        if ($exception instanceof ValidationException) {
+            return response()->json([
+                'success' => false,
+                'message' => 'Validation failed',
+                'data'    => null,
+                'errors'  => $exception->errors(),
+            ], 422);
+        }
+
+        if ($exception instanceof AuthenticationException) {
+            return response()->json([
+                'success' => false,
+                'message' => 'Unauthenticated',
+                'data'    => null,
+            ], 401);
+        }
+
+        // Unexpected error — log it before responding
+        // This is an ERROR level log: something broke that shouldn't have
+        \Illuminate\Support\Facades\Log::error('Unhandled exception', [
+            'message' => $exception->getMessage(),
+            'file'    => $exception->getFile(),
+            'line'    => $exception->getLine(),
+            'trace'   => $exception->getTraceAsString(),
+        ]);
+
+
+        return response()->json([
+            'success' => false,
+            'message' => 'Server error',   // Never expose the raw exception message
+            'data'    => null,
+        ], 500);
     }
+
 }
