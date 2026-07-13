@@ -29,8 +29,15 @@ class ParcelController extends Controller
             'tracking_no'    => 'required|string|max:64|unique:parcels,tracking_no',
             'recipient_name' => 'required|string|max:100',
             'address'        => 'required|string|max:255',
-            'weight'         => 'required|numeric|min:0',
+            'weight'         => 'nullable|numeric|min:0',
+            'status'         => 'nullable|in:pending,in_transit,delivered',
         ]);
+//        $this->validate($request, [
+//            'tracking_no'    => 'required|string|max:64|unique:parcels,tracking_no',
+//            'recipient_name' => 'required|string|max:100',
+//            'address'        => 'required|string|max:255',
+//            'weight'         => 'required|numeric|min:0',
+//        ]);
 
         $parcel = Parcel::create($request->all());
         // TODO: 新建成功应该返回 200 还是 201？
@@ -40,6 +47,13 @@ class ParcelController extends Controller
     // PUT /parcels/{id} —— 修改
     public function update(Request $request, $id)
     {
+        $this->validate($request, [
+            'tracking_no'    => 'sometimes|string|max:64|unique:parcels,tracking_no,' . $id,
+            'recipient_name' => 'sometimes|string|max:100',
+            'address'        => 'sometimes|string|max:255',
+            'weight'         => 'sometimes|numeric|min:0',
+            'status'         => 'sometimes|in:pending,in_transit,delivered',
+        ]);
         $parcel = Parcel::find($id);
         // TODO: 找不到怎么办？
         if (!$parcel) {
