@@ -5,6 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3d505c75-aba2-4dea-9cf1-eeec843d79f9" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/parcel-api/app/Services/ParcelService.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/parcel-api/app/Http/Controllers/ParcelController.php" beforeDir="false" afterPath="$PROJECT_DIR$/parcel-api/app/Http/Controllers/ParcelController.php" afterDir="false" />
     </list>
@@ -23,7 +24,7 @@
     <execution />
   </component>
   <component name="EmbeddingIndexingInfo">
-    <option name="cachedIndexableFilesCount" value="99" />
+    <option name="cachedIndexableFilesCount" value="100" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -41,23 +42,23 @@
   </component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="1.0813715430433215" />
-      <entry key="MS500" value="3.000711471953434" />
-      <entry key="S2" value="8.696615179421176" />
-      <entry key="S5" value="15.557482279109571" />
-      <entry key="S10" value="20.38540113732941" />
-      <entry key="S30" value="25.052325882142732" />
-      <entry key="S60" value="26.46695665912694" />
-      <entry key="M2" value="27.217991790668354" />
-      <entry key="M5" value="27.683388356765246" />
-      <entry key="M10" value="27.841051649798494" />
-      <entry key="M15" value="27.893891064982594" />
-      <entry key="M30" value="27.946873701763412" />
-      <entry key="H1" value="27.973418865652278" />
-      <entry key="H2" value="27.986704933740224" />
-      <entry key="H4" value="27.993523771313573" />
-      <entry key="D1" value="38.92381101664475" />
-      <entry key="W1" value="260.19003052982066" />
+      <entry key="MS100" value="1.4327330975131842" />
+      <entry key="MS500" value="4.137304927085815" />
+      <entry key="S2" value="10.936153462123627" />
+      <entry key="S5" value="15.714986489157665" />
+      <entry key="S10" value="18.074293840711114" />
+      <entry key="S30" value="19.952737218196013" />
+      <entry key="S60" value="20.46672343692557" />
+      <entry key="M2" value="20.73089923165032" />
+      <entry key="M5" value="20.89176200749656" />
+      <entry key="M10" value="20.945797121866455" />
+      <entry key="M15" value="20.96553106035077" />
+      <entry key="M30" value="21.195729901605233" />
+      <entry key="H1" value="23.980867585611175" />
+      <entry key="H2" value="33.27514784427304" />
+      <entry key="H4" value="46.533328522955756" />
+      <entry key="D1" value="78.06628857089511" />
+      <entry key="W1" value="301.4892372296473" />
     </decayedCancelled>
     <decayedSelected>
       <entry key="MS100" value="0.0" />
@@ -68,34 +69,34 @@
       <entry key="S30" value="0.0" />
       <entry key="S60" value="0.0" />
       <entry key="M2" value="0.0" />
-      <entry key="M5" value="3.0843417748477912E-260" />
-      <entry key="M10" value="2.4824572029611703E-130" />
-      <entry key="M15" value="4.976035602047885E-87" />
-      <entry key="M30" value="9.975458867941425E-44" />
-      <entry key="H1" value="4.466583678306505E-22" />
-      <entry key="H2" value="2.98883020842241E-11" />
-      <entry key="H4" value="7.73157927306088E-6" />
-      <entry key="D1" value="0.2971758027910056" />
-      <entry key="W1" value="8.913479954294361" />
+      <entry key="M5" value="2.7805912451002322E-278" />
+      <entry key="M10" value="2.3570516405179796E-139" />
+      <entry key="M15" value="4.8070100553621E-93" />
+      <entry key="M30" value="9.804572404934392E-47" />
+      <entry key="H1" value="1.4003073311449722E-23" />
+      <entry key="H2" value="5.292065221788934E-12" />
+      <entry key="H4" value="3.2533454851053505E-6" />
+      <entry key="D1" value="0.25725102068986355" />
+      <entry key="W1" value="8.731651359109273" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="1.0303337886291442" />
-      <entry key="MS500" value="2.972459476481169" />
-      <entry key="S2" value="8.674381836317654" />
-      <entry key="S5" value="15.539571391384769" />
-      <entry key="S10" value="20.372831552538486" />
-      <entry key="S30" value="25.04688757200657" />
-      <entry key="S60" value="26.464041514815634" />
-      <entry key="M2" value="27.216481614947515" />
-      <entry key="M5" value="27.682771170134444" />
-      <entry key="M10" value="27.84074082815704" />
-      <entry key="M15" value="27.893683352192348" />
-      <entry key="M30" value="27.946769595387554" />
-      <entry key="H1" value="27.973366749818823" />
-      <entry key="H2" value="27.986678860173168" />
-      <entry key="H4" value="27.993518459546028" />
-      <entry key="D1" value="39.2209564516952" />
-      <entry key="W1" value="269.10342167864934" />
+      <entry key="MS100" value="1.3609451065016076" />
+      <entry key="MS500" value="4.075976590473636" />
+      <entry key="S2" value="10.867613497841875" />
+      <entry key="S5" value="15.67274722524124" />
+      <entry key="S10" value="18.049607639091892" />
+      <entry key="S30" value="19.94357358157352" />
+      <entry key="S60" value="20.462014506981863" />
+      <entry key="M2" value="20.728512162569242" />
+      <entry key="M5" value="20.89079924655284" />
+      <entry key="M10" value="20.945314409519806" />
+      <entry key="M15" value="20.965208920102018" />
+      <entry key="M30" value="21.1955666196701" />
+      <entry key="H1" value="23.98077414468555" />
+      <entry key="H2" value="33.27508360080579" />
+      <entry key="H4" value="46.5332880304796" />
+      <entry key="D1" value="78.32350482754002" />
+      <entry key="W1" value="310.2208003143318" />
     </decayedShown>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" interpreter_name="$PROJECT_DIR$/../../../../tools/php82/php.exe">
@@ -301,17 +302,18 @@
     "RunOnceActivity.MCP Project settings loaded": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
     "codeWithMe.voiceChat.enabledByDefault": "false",
     "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
-    "git-widget-placeholder": "global-exception-handler",
+    "git-widget-placeholder": "addingService",
     "junie.onboarding.icon.badge.shown": "true",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "com.laravel_idea.plugin.routing.settings.LaravelIdeaRoutingSettingsForm",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
     "to.speed.mode.migration.done": "true",
     "vue.rearranger.settings.migration": "true"
   },
@@ -367,12 +369,25 @@
       <option name="presentableId" value="Default" />
       <updated>1783017707951</updated>
       <workItem from="1783017708746" duration="27986000" />
-      <workItem from="1783450038088" duration="41617000" />
+      <workItem from="1783450038088" duration="44521000" />
+      <workItem from="1783981004954" duration="1280000" />
+      <workItem from="1783982376871" duration="5232000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
