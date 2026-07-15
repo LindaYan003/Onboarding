@@ -14,6 +14,7 @@ $router->group(['middleware' => 'auth'], function () use ($router) {
         $router->post('/', 'ParcelController@store');
         $router->put('/{id}', 'ParcelController@update');
         $router->delete('/{id}', 'ParcelController@destroy');
+        $router->get('/deleted', 'ParcelController@deleted');
 
         });$router->group(['prefix' => 'auth'], function () use ($router) {
 
