@@ -3,27 +3,29 @@ namespace App\Services;
 
 use App\Models\Parcel;
 use Illuminate\Support\Facades\Log;
-
+use App\Repositories\ParcelRepository;
+use Carbon\Carbon;
 class ParcelService
 {
+    public function __construct(private ParcelRepository $repo) {}
+    //   ← Dependency Injection again: Service asks for Repository,
+    //     container provides it. Service never calls Eloquent directly.
+
     public function getAll()
     {
-        return Parcel::all();
+        return $this->repo->all();
     }
 
     public function findOrFail(int $id): Parcel
     {
-        return Parcel::findOrFail($id);  // throws ModelNotFoundException if not found
+        return $this->repo->findOrFail($id);
     }
 
     public function create(array $data): Parcel
     {
-        // Business rule: status is always 'pending' on creation
         $data['status'] = 'pending';
+        $parcel = $this->repo->create($data);
 
-        $parcel = Parcel::create($data);
-
-        // Business event log — info level: this is a normal, expected event
         Log::info('Parcel created', [
             'parcel_id'   => $parcel->id,
             'tracking_no' => $parcel->tracking_no,
@@ -35,9 +37,8 @@ class ParcelService
     public function update(Parcel $parcel, array $data): Parcel
     {
         $old_status = $parcel->status;
-        $parcel->update($data);
+        $updated = $this->repo->update($parcel, $data);
 
-        // Log status changes explicitly — useful for auditing
         if (isset($data['status']) && $data['status'] !== $old_status) {
             Log::info('Parcel status changed', [
                 'parcel_id' => $parcel->id,
@@ -46,12 +47,22 @@ class ParcelService
             ]);
         }
 
-        return $parcel->fresh();
+        return $updated;
     }
 
-    public function delete(Parcel $parcel): void
+    public function softDelete(Parcel $parcel): void
     {
-        $parcel->delete();
-        Log::info('Parcel deleted', ['parcel_id' => $parcel->id]);
+        $this->repo->softDelete($parcel);
+
+        Log::info('Parcel soft deleted', [
+            'parcel_id'  => $parcel->id,
+            'deleted_at' => Carbon::now()->toDateTimeString(),
+        ]);
+    }
+
+    // Bonus: expose deleted parcels for customer service
+    public function getDeleted()
+    {
+        return $this->repo->deleted();
     }
 }

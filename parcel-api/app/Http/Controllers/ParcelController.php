@@ -52,7 +52,12 @@ class ParcelController extends Controller
     public function destroy($id)
     {
         $parcel = $this->service->findOrFail($id);
-        $this->service->delete($parcel);
+        $this->service->softDelete($parcel);
         return $this->success(null, 'Deleted', 200);
+    }
+
+    public function deleted()
+    {
+        return $this->success($this->service->getDeleted());
     }
 }
