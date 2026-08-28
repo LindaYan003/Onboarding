@@ -1,0 +1,265 @@
+/* ---------------------------------------------------
+   Design tokens — one spacing/color scale, reused
+   everywhere so nothing gets an ad-hoc margin value.
+   --------------------------------------------------- */
+:root {
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 1rem;
+  --space-4: 1.5rem;
+  --space-5: 2rem;
+
+  --color-text: #1f2937;
+  --color-muted: #6b7280;
+  --color-border: #d1d5db;
+  --color-border-light: #e5e7eb;
+  --color-surface: #ffffff;
+  --color-surface-alt: #f9fafb;
+  --color-brand: #1d4ed8;
+  --color-brand-hover: #1e40af;
+
+  --radius: 8px;
+}
+
+/* ---------------------------------------------------
+   Reset / base
+   --------------------------------------------------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  color: var(--color-text);
+  background: var(--color-surface-alt);
+  line-height: 1.5;
+}
+
+h1 {
+  margin: 0 0 var(--space-4) 0;
+  font-size: 1.5rem;
+}
+
+/* ---------------------------------------------------
+   Nav bar — Flexbox, space-between
+   --------------------------------------------------- */
+.site-header {
+  background: var(--color-surface);
+  border-bottom: 1px solid var(--color-border-light);
+}
+
+.site-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  max-width: 960px;
+  margin: 0 auto;
+  padding: var(--space-3) var(--space-4);
+}
+
+.site-nav__brand {
+  font-weight: 700;
+  font-size: 1.125rem;
+  color: var(--color-text);
+  text-decoration: none;
+}
+
+.site-nav__links {
+  display: flex;
+  gap: var(--space-4);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.site-nav__links a {
+  color: var(--color-muted);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.site-nav__links a:hover,
+.site-nav__links a:focus-visible {
+  color: var(--color-brand);
+}
+
+/* ---------------------------------------------------
+   Page layout
+   --------------------------------------------------- */
+.page {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: var(--space-5) var(--space-4);
+}
+
+/* ---------------------------------------------------
+   Shared form-field styling (box model applied
+   consistently: same padding/gap on every field)
+   --------------------------------------------------- */
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  margin-bottom: var(--space-4);
+}
+
+.field label {
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+input,
+select,
+textarea {
+  font: inherit;
+  color: inherit;
+  padding: var(--space-2) var(--space-3);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  background: var(--color-surface);
+}
+
+textarea {
+  min-height: 6rem;
+  resize: vertical;
+}
+
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid var(--color-brand);
+  outline-offset: 1px;
+}
+
+/* Toolbar above the parcel table (search + filter) */
+.toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: var(--space-4);
+  margin-bottom: var(--space-4);
+}
+
+.field--inline {
+  margin-bottom: 0;
+  min-width: 200px;
+}
+
+/* ---------------------------------------------------
+   Parcel table
+   --------------------------------------------------- */
+.parcel-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border-light);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.parcel-table th,
+.parcel-table td {
+  padding: var(--space-3);
+  text-align: left;
+  border-bottom: 1px solid var(--color-border-light);
+}
+
+.parcel-table thead th {
+  background: var(--color-surface-alt);
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  color: var(--color-muted);
+}
+
+.parcel-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* ---------------------------------------------------
+   Form layout + submit button
+   --------------------------------------------------- */
+.parcel-form {
+  max-width: 480px;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border-light);
+  border-radius: var(--radius);
+  padding: var(--space-4);
+}
+
+.form-actions {
+  margin-top: var(--space-4);
+}
+
+button[type="submit"] {
+  font: inherit;
+  font-weight: 600;
+  color: #fff;
+  background: var(--color-brand);
+  border: none;
+  border-radius: var(--radius);
+  padding: var(--space-2) var(--space-4);
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  background: var(--color-brand-hover);
+}
+
+/* ---------------------------------------------------
+   Responsive table → stacked cards below 600px
+   Classic pattern: hide <thead>, turn each <tr> into
+   a bordered block, label each cell with data-label.
+   --------------------------------------------------- */
+@media (max-width: 600px) {
+  .site-nav {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .parcel-table thead {
+    display: none;
+  }
+
+  .parcel-table,
+  .parcel-table tbody,
+  .parcel-table tr,
+  .parcel-table td {
+    display: block;
+    width: 100%;
+  }
+
+  .parcel-table tr {
+    margin-bottom: var(--space-3);
+    border: 1px solid var(--color-border-light);
+    border-radius: var(--radius);
+    overflow: hidden;
+  }
+
+  .parcel-table tr:last-child {
+    margin-bottom: 0;
+  }
+
+  .parcel-table td {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: var(--space-3);
+    border-bottom: 1px solid var(--color-border-light);
+  }
+
+  .parcel-table td:last-child {
+    border-bottom: none;
+  }
+
+  .parcel-table td::before {
+    content: attr(data-label);
+    font-weight: 600;
+    color: var(--color-muted);
+  }
+}

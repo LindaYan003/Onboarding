@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>New Parcel</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="site-nav">
+      <a class="site-nav__brand" href="parcel-list.html">Parcel Tracker</a>
+      <ul class="site-nav__links">
+        <li><a href="parcel-list.html">Parcels</a></li>
+        <li><a href="parcel-form.html">New Parcel</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="page">
+    <h1>New Parcel</h1>
+
+    <form class="parcel-form" action="#" method="post">
+      <div class="field">
+        <label for="tracking_no">Tracking No.</label>
+        <input type="text" id="tracking_no" name="tracking_no" required>
+      </div>
+
+      <div class="field">
+        <label for="recipient_name">Recipient Name</label>
+        <input type="text" id="recipient_name" name="recipient_name" required>
+      </div>
+
+      <div class="field">
+        <label for="address">Address</label>
+        <textarea id="address" name="address" required></textarea>
+      </div>
+
+      <div class="field">
+        <label for="status">Status</label>
+        <select id="status" name="status">
+          <option value="pending">Pending</option>
+          <option value="in_transit">In Transit</option>
+          <option value="delivered">Delivered</option>
+        </select>
+      </div>
+
+      <p class="form-error" id="form-error" hidden></p>
+
+      <div class="form-actions">
+        <button type="submit">Create Parcel</button>
+      </div>
+    </form>
+  </main>
+
+  <script src="api.js"></script>
+  <script>
+    document.querySelector('.parcel-form').addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const f = e.target;
+      const errorEl = document.getElementById('form-error');
+      const submitBtn = f.querySelector('button[type="submit"]');
+      const originalLabel = submitBtn.textContent;
+      errorEl.hidden = true;
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Saving…';
+
+      try {
+        const res = await apiFetch('/parcels', {
+          method: 'POST',
+          body: JSON.stringify({
+            tracking_no: f.tracking_no.value,
+            recipient_name: f.recipient_name.value,
+            address: f.address.value,
+            status: f.status.value,
+          }),
+        });
+        const body = await res.json();
+        if (!res.ok) throw new Error(body.message || `Server responded with ${res.status}`);
+        window.location.href = 'parcel-list.html';
+      } catch (err) {
+        errorEl.textContent = `Could not create parcel: ${err.message}`;
+        errorEl.hidden = false;
+        submitBtn.disabled = false;
+        submitBtn.textContent = originalLabel;
+      }
+    });
+  </script>
+</body>
+</html>

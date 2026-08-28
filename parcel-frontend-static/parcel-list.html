@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Parcel List</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="site-nav">
+      <a class="site-nav__brand" href="parcel-list.html">Parcel Tracker</a>
+      <ul class="site-nav__links">
+        <li><a href="parcel-list.html">Parcels</a></li>
+        <li><a href="parcel-form.html">New Parcel</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="page">
+    <h1>Parcels</h1>
+
+    <div class="toolbar">
+      <div class="field field--inline">
+        <label for="parcel-search">Search</label>
+        <input type="search" id="parcel-search" name="parcel-search" placeholder="Search by tracking no. or recipient">
+      </div>
+
+      <div class="field field--inline">
+        <label for="status-filter">Status</label>
+        <select id="status-filter" name="status-filter">
+          <option value="all">All</option>
+          <option value="pending">Pending</option>
+          <option value="in_transit">In Transit</option>
+          <option value="delivered">Delivered</option>
+        </select>
+      </div>
+    </div>
+
+    <table class="parcel-table">
+      <thead>
+        <tr>
+          <th scope="col">Tracking No</th>
+          <th scope="col">Recipient</th>
+          <th scope="col">Status</th>
+          <th scope="col">Created</th>
+        </tr>
+      </thead>
+      <tbody id="parcel-table-body">
+        <tr><td colspan="4">Loading…</td></tr>
+      </tbody>
+    </table>
+  </main>
+
+  <script src="api.js"></script>
+  <script>
+    async function loadParcels() {
+      const tbody = document.getElementById('parcel-table-body');
+      tbody.innerHTML = '<tr><td colspan="4">Loading…</td></tr>';
+      try {
+        const res = await apiFetch('/parcels');
+        if (!res.ok) throw new Error(`Server responded with ${res.status}`);
+        const { data: parcels } = await res.json();
+        tbody.innerHTML = parcels.length
+          ? parcels.map(p => `<tr>
+              <td data-label="Tracking No">${p.tracking_no}</td>
+              <td data-label="Recipient">${p.recipient_name}</td>
+              <td data-label="Status">${p.status}</td>
+              <td data-label="Created">${(p.created_at || '').slice(0, 10)}</td>
+            </tr>`).join('')
+          : '<tr><td colspan="4">No parcels found.</td></tr>';
+      } catch (err) {
+        tbody.innerHTML = `<tr><td colspan="4">Couldn't load parcels: ${err.message}</td></tr>`;
+      }
+    }
+    loadParcels();
+  </script>
+</body>
+</html>

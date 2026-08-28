@@ -37,6 +37,7 @@ class ParcelController extends Controller
 
     public function update(Request $request, $id)
     {
+        log($id);
         $parcel = $this->service->findOrFail($id);
         $this->validate($request, [
             'tracking_no'    => 'sometimes|string|max:64|unique:parcels,tracking_no,' . $id,
